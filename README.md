@@ -92,5 +92,3 @@ To allow for project specific formatting the follow extensions are required
 
 - octref.vetur
 - esbenp.prettier-vscode
-
-# test
