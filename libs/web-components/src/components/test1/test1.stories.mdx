@@ -1,0 +1,14 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
+import Test1 from './Test1.svelte';
+
+<Meta title="Test1" component={Test1} />
+
+<Canvas>
+  <Story name="primary">
+    {(args) => {
+      return {
+        template: `<Test1 />`,
+      };
+    }}
+  </Story>
+</Canvas>

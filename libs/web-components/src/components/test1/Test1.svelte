@@ -4,4 +4,4 @@
 <style>
 </style>
 
-<h1>Hello component!</h1>
+<h1>Hello component1!</h1>
