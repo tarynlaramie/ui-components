@@ -1,4 +1,19 @@
 {
   "name": "@abgov/web-components",
-  "version": "0.0.1"
+  "version": "0.0.0",
+  "description": "Government of Alberta - UI components for Web Components",
+  "bugs": {
+    "url": "https://github.com/GovAlta/ui-components/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "GoA",
+    "template",
+    "web-components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GovAlta/ui-components.git",
+    "directory": "libs/web-components"
+  }
 }
