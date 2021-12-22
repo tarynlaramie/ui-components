@@ -48,6 +48,7 @@ jobs:
           npm run build:angular-material-storybook
           npm run build:vue-storybook
           npm run build:react-storybook
+          npm run build:web-components-storybook
           cp nginx.conf dist/storybook
       - name: Oc login
         uses: redhat-actions/oc-login@v1

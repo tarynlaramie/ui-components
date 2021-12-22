@@ -40,6 +40,10 @@ module.exports = {
     'storybook-addon-xd-designs',
   ],
   refs: {
+    webComponents: {
+      title: 'Web Components',
+      url: '/web-components/',
+    },
     angular: {
       title: 'Angular',
       url: '/angular/',
