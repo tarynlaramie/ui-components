@@ -18,5 +18,8 @@
   },
   "type": "module",
   "module": "dist/index.mjs",
-  "main": "dist/index.ts"
+  "main": "dist/index.ts",
+  "files": [
+    "dist"
+  ]
 }

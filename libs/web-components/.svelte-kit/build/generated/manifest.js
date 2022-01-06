@@ -31,6 +31,12 @@ export const routes = [
 
 	,
 
+	,
+
+	,
+
+	,
+
 	// src/components/test1/Test1.svelte
 	[/^\/src\/components\/test1\/Test1\/?$/, [c[0], c[2]], [c[1]]]
 ];
