@@ -55,7 +55,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "postinstall": "node node_modules/@nx-plus/vue/patch-nx-dep-graph.js && ngcc --properties es2015 browser module main",
-    "try-wc-build": "cd libs/web-components && svelte-kit build",
+    "try-wc-ru-build": "cd libs/web-components && rollup -c",
+    "try-wc-sk-build": "cd libs/web-components && svelte-kit build -- --verbose",
     "try-wc-package": "cd libs/web-components && svelte-kit package"
   },
   "private": true,
@@ -202,6 +203,7 @@
     "react-docgen": "^5.3.0",
     "react-test-renderer": "17.0.2",
     "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-summary": "^1.3.0",
     "rxjs": "6.5.5",
     "sass-loader": "^10.2.0",
     "semantic-release": "~17.4.2",

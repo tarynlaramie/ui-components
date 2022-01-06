@@ -17,5 +17,6 @@
     "directory": "libs/web-components"
   },
   "type": "module",
-  "main": "bundle.js"
+  "module": "dist/index.mjs",
+  "main": "dist/index.ts"
 }
