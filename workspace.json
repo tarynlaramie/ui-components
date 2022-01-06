@@ -286,10 +286,17 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/demo/angular-demo/src/favicon.ico",
-              "apps/demo/angular-demo/src/assets"
+              "apps/demo/angular-demo/src/assets",
+              {
+                "glob": "{*loader.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs",
+                "output": "webcomponents/"
+              }
             ],
             "styles": ["apps/demo/angular-demo/src/styles.scss"],
-            "scripts": []
+            "scripts": [
+              "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -796,6 +803,44 @@
               "dev": false
             }
           }
+        },
+        "package": {
+          "executor": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/web-components",
+            "tsConfig": "libs/web-components/tsconfig.lib.json",
+            "packageJson": "libs/web-components/package.json",
+            "main": "libs/web-components/src/index.ts",
+            "assets": [
+              "libs/web-components/*.md",
+              {
+                "input": "./libs/web-components/src",
+                "glob": "**/!(*.ts)",
+                "output": "./src"
+              },
+              {
+                "input": "./libs/web-components/src",
+                "glob": "**/*.d.ts",
+                "output": "./src"
+              },
+              {
+                "input": "./libs/web-components",
+                "glob": "generators.json",
+                "output": "."
+              },
+              {
+                "input": "./libs/web-components",
+                "glob": "builders.json",
+                "output": "."
+              },
+              {
+                "input": "./libs/web-components",
+                "glob": "migrations.json",
+                "output": "."
+              }
+            ]
+          },
+          "outputs": ["{options.outputPath}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",

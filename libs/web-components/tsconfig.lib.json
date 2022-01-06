@@ -1,9 +1,12 @@
 {
+  "composite": true,
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc"
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "**/*.spec.ts",
     "**/*_spec.ts",

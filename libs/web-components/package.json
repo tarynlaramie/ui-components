@@ -15,5 +15,7 @@
     "type": "git",
     "url": "https://github.com/GovAlta/ui-components.git",
     "directory": "libs/web-components"
-  }
+  },
+  "type": "module",
+  "main": "bundle.js"
 }

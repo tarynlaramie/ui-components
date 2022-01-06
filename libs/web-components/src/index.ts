@@ -1,2 +1,2 @@
 
-export { default as Test1 } from './components/test1/Test1.svelte';
+export { default as GoaTest } from './components/test1/Test1.svelte';

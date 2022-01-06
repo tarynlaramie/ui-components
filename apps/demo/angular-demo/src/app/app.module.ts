@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import '@abgov/web-components1';
 
 import { AppComponent } from './app.component';
 
@@ -8,5 +9,8 @@ import { AppComponent } from './app.component';
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA
+  ]
 })
-export class AppModule {}
+export class AppModule { }

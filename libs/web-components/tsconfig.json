@@ -1,31 +1,71 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "DOM"
+    ],
+    "target": "es2020",
+    /**
+			svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
+			to enforce using \`import type\` instead of \`import\` for Types.
+			*/
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
+    "resolveJsonModule": true,
+    /**
+			To have warnings/errors of the Svelte compiler at the correct position,
+			enable source maps by default.
+			*/
     "sourceMap": true,
-    "types": ["svelte"],
-    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./.storybook/tsconfig.json"
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "paths": {
+      "$lib": [
+        "src/lib"
+      ],
+      "$lib/*": [
+        "src/lib/*"
+      ]
     }
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.svelte"
   ]
+  // "extends": "../../tsconfig.base.json",
+  // "compilerOptions": {
+  //   "moduleResolution": "node",
+  //   "target": "es2017",
+  //   "importsNotUsedAsValues": "error",
+  //   "isolatedModules": true,
+  //   "sourceMap": true,
+  //   "types": [
+  //     "svelte"
+  //   ],
+  //   "strict": false,
+  //   "esModuleInterop": true,
+  //   "skipLibCheck": true,
+  //   "forceConsistentCasingInFileNames": true
+  // },
+  // "files": [],
+  // "include": [],
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.lib.json"
+  //   },
+  //   {
+  //     "path": "./tsconfig.spec.json"
+  //   },
+  //   {
+  //     "path": "./.storybook/tsconfig.json"
+  //   }
+  // ]
 }
