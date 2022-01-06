@@ -16,10 +16,5 @@
     "url": "https://github.com/GovAlta/ui-components.git",
     "directory": "libs/web-components"
   },
-  "type": "module",
-  "module": "dist/index.mjs",
-  "main": "dist/index.ts",
-  "files": [
-    "dist"
-  ]
+  "type": "module"
 }
