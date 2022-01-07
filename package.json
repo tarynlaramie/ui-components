@@ -86,7 +86,7 @@
   },
   "devDependencies": {
     "@abgov/nx-release": "^1.1.0",
-    "@abgov/web-components1": "file:./dist/packages/web-components",
+    "@abgov/web-components1": "file:./dist/libs/web-components",
     "@angular-devkit/build-angular": "12.1.4",
     "@angular-devkit/build-ng-packagr": "0.1001.7",
     "@angular-eslint/eslint-plugin": "12.3.1",
