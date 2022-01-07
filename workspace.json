@@ -788,6 +788,11 @@
                 "glob": "/*",
                 "input": "./public/**",
                 "output": "./"
+              },
+              {
+                "input": "./libs/web-components",
+                "glob": "package.json",
+                "output": "."
               }
             ]
           },
