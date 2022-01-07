@@ -2,12 +2,16 @@
   "composite": true,
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc"
+    // "outDir": "../../dist/out-tsc",
+    "outDir": ".",
+    "declaration": true,
+    "rootDir": "./src",
+    "types": [
+      "node"
+    ]
   },
-  "declarations": "true",
-  "declarationDir": "components",
   "include": [
-    "src/**/*"
+    "src/**/*",
   ],
   "exclude": [
     "**/*.spec.ts",
