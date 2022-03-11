@@ -1,6 +1,6 @@
 // console.log('pre-build.ts args', process.argv);
 
-import { Components } from './src/component-list';
+import { COMPONENTS } from './src/component-list';
 import { ComponentStatus, componentHasStatus } from './src/component-status';
 import { writeFileSync } from 'fs';
 
@@ -25,7 +25,7 @@ function generateIndexFile(componentStatus: ComponentStatus) {
 
   let exportBuffer = [];
 
-  Components.forEach(c => {
+  COMPONENTS.forEach(c => {
     // console.log(`Pre-Build: component: ${c.className} status: ${c.status} hasStatus: ${componentHasStatus(c, componentStatus)}`);
 
     if (componentHasStatus(c, componentStatus)) {

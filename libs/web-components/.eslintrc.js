@@ -2,7 +2,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['svelte3', '@typescript-eslint'],
   extends: ['../../.eslintrc.json'],
-  ignorePatterns: ['!**/*'],
+  ignorePatterns: ['!**/*', 'pre-build.ts'],
   overrides: [
     {
       files: ['*.ts', '*.js', '*.svelte'],
@@ -13,7 +13,9 @@ module.exports = {
     },
     {
       files: ['*.ts', '*.tsx'],
-      rules: {},
+      rules: {
+        "@typescript-eslint/naming-convention": ["error", { "selector": "enumMember", "format": ["PascalCase"] }],
+      },
     },
     {
       files: ['*.js', '*.jsx'],

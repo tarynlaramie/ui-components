@@ -24,7 +24,7 @@ export function componentHasStatus(component, componentStatus: ComponentStatus):
     }
 
     case ComponentStatus.Prod: {
-      hasStatus = component.status == ComponentStatus.Prod;
+      hasStatus = component.status === ComponentStatus.Prod;
 
       break;
     }
