@@ -39,7 +39,7 @@ jobs:
         run: npx nx affected --target=test --base=${{ steps.last_successful_commit.outputs.commit_hash }}
       - name: Build
         run: |
-          npx nx affected --target=build --base=${{ steps.last_successful_commit.outputs.commit_hash }} --prod --with-deps
+          npx nx affected --target=build --base=${{ steps.last_successful_commit.outputs.commit_hash }} --prod --with-deps -- --component-state=beta
           npx nx affected --target=post --base=${{ steps.last_successful_commit.outputs.commit_hash }}
       - name: Release
         env:
