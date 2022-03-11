@@ -623,6 +623,17 @@
           }
         },
         "build": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "ts-node pre-build.ts {args.component-state}",
+              "nx build web-components:build-lib:{args.component-state}"
+            ],
+            "cwd": "libs/web-components",
+            "parallel": false
+          }
+        },
+        "build-lib": {
           "builder": "@nxext/vite:package",
           "outputs": ["{options.outputPath}"],
           "options": {
@@ -640,7 +651,15 @@
             "tsConfig": "libs/web-components/tsconfig.lib.json"
           },
           "configurations": {
-            "production": {}
+            "beta": {
+              "entryFile": "src/index.beta.ts"
+            },
+            "prod": {
+              "entryFile": "src/index.prod.ts"
+            },
+            "production": {
+              "entryFile": "src/index.prod.ts"
+            }
           }
         },
         "storybook": {

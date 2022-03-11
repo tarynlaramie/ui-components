@@ -1,1 +1,4 @@
 build
+
+src/index.beta.ts
+src/index.prod.ts
