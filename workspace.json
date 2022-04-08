@@ -331,9 +331,16 @@
           "options": {
             "parallel": false,
             "commands": [
+              "ts-node pre-build.ts",
               "nx run react-components:build-lib",
               "nx run react-components:build-experimental"
-            ]
+            ],
+            "xyz": "asdfd"
+          },
+          "configurations": {
+            "beta2": {
+              "xyz": "123"
+            }
           }
         },
         "build-lib": {
@@ -627,7 +634,7 @@
           "options": {
             "commands": [
               "ts-node pre-build.ts {args.component-state}",
-              "nx build web-components:build-lib:{args.component-state}"
+              "nx run web-components:build-lib:{args.component-state}"
             ],
             "cwd": "libs/web-components",
             "parallel": false
