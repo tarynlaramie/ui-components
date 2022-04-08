@@ -1,4 +1,4 @@
-// console.log('pre-build.ts args', process.argv);
+console.log('Pre-Build: args:', process.argv);
 
 import { COMPONENTS } from './src/component-list';
 import { ComponentStatus, componentHasStatus } from './src/component-status';
@@ -7,7 +7,7 @@ import { writeFileSync } from 'fs';
 let componentStatus = ComponentStatus.Prod;
 
 const statusArg = process.argv[2];
-if (statusArg) {
+if ((statusArg) && (statusArg !== 'undefined')) {
   const status = statusArg.charAt(0).toUpperCase() + statusArg.slice(1);
   componentStatus = ComponentStatus[status];
 }
